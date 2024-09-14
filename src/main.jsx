@@ -7,6 +7,8 @@ import { createContext } from "react";
 
 export const server = "https://nodejs-todoapp-rkat.onrender.com/api/v1";
 
+// export const server = "https://todo-backend-api-omega.vercel.app/";
+
 export const Context = createContext({ isAuthenticated: false });
 
 const AppWrapper = () => {
