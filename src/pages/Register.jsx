@@ -9,10 +9,11 @@ function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const { isAuthenticated, setIsAuthenticated } = useContext(Context);
+    const { isAuthenticated, setIsAuthenticated, loading, setLoading } = useContext(Context);
 
     const submitHandler = async (e) => {
         e.preventDefault();
+        setLoading(true);
         try {
             const { data } = await axios.post(
                 `${server}/users/register`,
@@ -30,10 +31,12 @@ function Register() {
             );
             toast.success(data.message);
             setIsAuthenticated(true);
+            setLoading(false);
         } catch (error) {
             toast.error("Some error");
             console.log(error);
             setIsAuthenticated(false);
+            setLoading(false);
         }
     };
 
@@ -64,7 +67,7 @@ function Register() {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                    <button type="submit">Sign Up</button>
+                    <button disabled={loading} type="submit">Sign Up</button>
                     <h4>Or</h4>
                     <Link to="/login">Log In</Link>
                 </form>
