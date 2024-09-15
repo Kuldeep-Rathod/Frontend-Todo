@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { Context } from "../main";
 import Loader from "../components/Loader";
 import { Navigate } from "react-router-dom";
-import "./Profile.scss"; // Importing the SCSS file
 
 function Profile() {
     const { isAuthenticated, loading, user } = useContext(Context);
