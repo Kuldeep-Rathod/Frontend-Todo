@@ -55,35 +55,3 @@
     background-color: #0056b3;
   }
   
-  /* Dark Mode */
-  @media (prefers-color-scheme: dark) {
-    .profile-container {
-      background-color: #2d2d2d;
-    }
-  
-    .profile-card {
-      background-color: #1c1c1c;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
-    }
-  
-    .profile-avatar {
-      border-color: #444;
-    }
-  
-    .profile-name {
-      color: #fff;
-    }
-  
-    .profile-email {
-      color: #bbb;
-    }
-  
-    .edit-button {
-      background-color: #007bff;
-    }
-  
-    .edit-button:hover {
-      background-color: #0056b3;
-    }
-  }
-  
