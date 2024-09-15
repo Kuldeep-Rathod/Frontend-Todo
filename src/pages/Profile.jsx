@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../main";
 import Loader from "../components/Loader";
 import { Navigate } from "react-router-dom";
-import pic from "../assets/profile.png";
+import pic from "../assets/profile.jpg";
 
 function Profile() {
     const { isAuthenticated, loading, user } = useContext(Context);
