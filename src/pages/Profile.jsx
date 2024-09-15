@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../main";
 import Loader from "../components/Loader";
 import { Navigate } from "react-router-dom";
+import Profile from "../assets/profile.png";
 
 function Profile() {
     const { isAuthenticated, loading, user } = useContext(Context);
@@ -16,7 +17,7 @@ function Profile() {
                 {/* Avatar */}
                 <div>
                     <img 
-                        src="https://via.placeholder.com/150" 
+                        src={Profile}
                         alt="User Avatar" 
                         className="profile-avatar"
                     />
